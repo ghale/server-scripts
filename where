@@ -1,0 +1,60 @@
+#!/bin/sh
+
+case $1 in
+    ubuntu1)
+        HOST=dev3.gradle.org
+        ;;
+    windows1)
+        HOST=dev4.gradle.org
+        ;;
+    ubuntu2)
+        HOST=dev5.gradle.org
+        ;;
+    ubuntu3)
+        HOST=dev6.gradle.org
+        ;;
+    ubuntu4)
+        HOST=dev7.gradle.org
+        ;;
+    windows2)
+        HOST=dev8.gradle.org
+        ;;
+    ubuntu5)
+        HOST=dev9.gradle.org
+        ;;
+    windows3)
+        HOST=dev10.gradle.org
+        ;;
+    windows4)
+        HOST=dev11.gradle.org
+        ;;
+    ubuntu6)
+        HOST=dev12.gradle.org
+        ;;
+    windows5)
+        HOST=dev13.gradle.org
+        ;;
+    windows6)
+        HOST=dev14.gradle.org
+        ;;
+    ubuntu7)
+        HOST=dev15.gradle.org
+        ;;
+    ubuntu8)
+        HOST=dev16.gradle.org
+        ;;
+    ubuntu9)
+        HOST=dev17.gradle.org
+        ;;
+    ubuntu10)
+        HOST=dev18.gradle.org
+        ;;
+    *)
+        echo
+        echo "'$1' is not a known VM!"
+        echo
+        exit 1
+        ;;
+esac
+
+echo "${HOST}"

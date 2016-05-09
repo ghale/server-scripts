@@ -1,0 +1,11 @@
+#!/bin/sh
+
+HOST=`where $1`
+
+echo "============================================="
+echo " Connecting to $1 via $HOST"
+echo "============================================="
+ssh -n -N -L 5900:localhost:5900 $HOST & 
+sleep 3
+"/Applications/Chicken.app/Contents/MacOS/Chicken" localhost:5900
+kill -HUP %1
