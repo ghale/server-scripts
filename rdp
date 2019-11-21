@@ -1,0 +1,12 @@
+#!/bin/sh
+
+HOST=`$(dirname $0)/where $1`
+
+echo "============================================="
+echo " Connecting to $1 via $HOST"
+echo "============================================="
+ssh -n -N -L 3390:${1}:3389 $HOST & 
+sleep 3
+#"/Applications/Chicken of the VNC.app/Contents/MacOS/Chicken of the VNC" localhost:5900
+command open -n -F -W -a /Applications/Microsoft\ Remote\ Desktop.app "rdp://full%20address=s:localhost:3390&audiomode=i:0&disable%20themes=i:1&prompt%20for%20credentials%20on%20client:i:0"
+kill -HUP %1
